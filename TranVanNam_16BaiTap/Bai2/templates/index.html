@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Máy tính cầm tay</title>
+
+</head>
+<body>
+    <h1>Máy tính cầm tay</h1>
+    <form method="POST">
+        <input type="number" name="num1" placeholder="Nhập số thứ nhất" required>
+        <select name="operation" required>
+            <option value="add">Cộng</option>
+            <option value="subtract">Trừ</option>
+            <option value="multiply">Nhân</option>
+            <option value="divide">Chia</option>
+        </select>
+        <input type="number" name="num2" placeholder="Nhập số thứ hai" required>
+        <input type="submit" value="Tính">
+    </form>
+    {% if result %}
+    <p>Kết quả: {{ result }}</p>
+    {% endif %}
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    form {
+        margin-top: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px #ccc;
+    }
+
+    input[type="number"], select, input[type="submit"] {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    p {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+</style>
+</html>

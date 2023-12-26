@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Phan trang</title>
+    <style>
+        .content {
+            margin: 10px auto;
+            width: 800px;
+            text-align: center;
+            border: 1px solid red;
+            padding: 20px;
+        }
+        .pages a {
+            display: inline-block;
+            width: 40px;
+            background:pink;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="pages">
+            {% for page_num in range(1, 8) %}
+                <a href="?page={{ page_num }}">{{ page_num }}</a>
+            {% endfor %}
+        </div>
+        <p>Bạn đang ở trang thứ {{ page }}</p>
+    </div>
+</body>
+</html>
